@@ -9,7 +9,7 @@ import pyperclip
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 headers = {
-    "Authorization": "Bearer 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",
+    "Authorization": "Bearer ",
     "Content-Type": "application/json"
 }
 
@@ -51,7 +51,7 @@ data = {
 }
 
 # Step 6: Call the chatbot API
-response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
+response = requests.post("", headers=headers, json=data)
 reply = response.json()["choices"][0]["message"]["content"]
 print("Chatbot reply:", reply)
 
